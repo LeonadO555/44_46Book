@@ -3,6 +3,7 @@ package ui.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class PageBase {
     public WebDriver driver;
@@ -21,5 +22,10 @@ public class PageBase {
         click(field);
         field.clear();
         field.sendKeys(value);
+    }
+
+    public void checkItemText(WebElement element, String expectedText, String err) {
+        String actualText = element.getText();
+        Assert.assertEquals(actualText, expectedText, err);
     }
 }

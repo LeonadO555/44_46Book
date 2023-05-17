@@ -10,16 +10,16 @@ public class RegistrationApi extends ApiBase {
     Faker faker = new Faker();
 
 
-    public RegistrationDto randomDataBodyForRegisterUser() {
+    public RegistrationDto randomDataBodyForRegisterUser(String password) {
         dto = new RegistrationDto();
         dto.setUserName(faker.name().username());
-        dto.setPassword("yA*UeeuA2pU3");
+        dto.setPassword(password);
         return dto;
     }
 
-    public Response registerUser(Integer code) {
+    public Response registerUser(Integer code, String password) {
         String endpoint = "/Account/v1/User";
-        response = postRequest(endpoint, code, randomDataBodyForRegisterUser());
+        response = postRequest(endpoint, code, randomDataBodyForRegisterUser(password));
         return response;
     }
 }
