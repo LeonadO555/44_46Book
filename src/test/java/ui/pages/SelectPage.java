@@ -36,8 +36,11 @@ public class SelectPage extends PageBase {
     @FindBy(id = "cars")
     WebElement standardMultiSelect;
 
-    @FindBy(id = "react-select-4-input")
+    @FindBy(xpath = "(//*[@class=' css-2b097c-container'])[3]")
     WebElement multiSelectDropDown;
+
+    @FindBy(id = "react-select-4-input")
+    WebElement multiSelectDropDownInput;
 
     @FindBy(css = "[class=' css-yk16xz-control']")
     WebElement thirdInput;
@@ -56,13 +59,13 @@ public class SelectPage extends PageBase {
 
     public void selectValueDropdown(String inputValue) {
         click(selectValueDropdown);
-        fillField(selectOptionInput, inputValue);
+        selectOptionInput.sendKeys(inputValue);
         pressKey(selectOptionInput, Keys.ENTER);
     }
 
     public void selectOneDropdown(String inputValue) {
         click(selectOneDropdown);
-        fillField(selectTitleInput, inputValue);
+        selectTitleInput.sendKeys(inputValue);
         pressKey(selectTitleInput, Keys.ENTER);
     }
 
@@ -80,10 +83,9 @@ public class SelectPage extends PageBase {
 
 
     public void multiSelectDD(String inputValue) {
-        driver.findElement(By.cssSelector("[class=' css-2b097c-container']")).click();
-        //     wait.forVisibility(thirdInput);
-        driver.findElement(By.id("react-select-4-input")).sendKeys(inputValue);
-        driver.findElement(By.id("react-select-4-input")).sendKeys(Keys.ENTER);
+        click(multiSelectDropDown);
+        multiSelectDropDownInput.sendKeys(inputValue);
+        pressKey(multiSelectDropDownInput, Keys.ENTER);
     }
 
     public void cleanInput() {
