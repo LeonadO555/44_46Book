@@ -28,6 +28,7 @@ public class RegistrationNewUserTest extends TestBase {
 
         profilePage = new ProfilePage(app.driver);
         profilePage.waitForLoading();
+        profilePage.scrollToTableNextButton();
         profilePage.checkUsername(userName);
     }
 
