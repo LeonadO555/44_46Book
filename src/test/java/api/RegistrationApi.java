@@ -12,8 +12,8 @@ public class RegistrationApi extends ApiBase {
 
     public RegistrationDto randomDataBodyForRegisterUser(String password) {
         dto = new RegistrationDto();
-        dto.setUserName(faker.name().username());
-        dto.setPassword(password);
+//        dto.setUserName(faker.name().username());
+//        dto.setPassword(password);
         return dto;
     }
 
