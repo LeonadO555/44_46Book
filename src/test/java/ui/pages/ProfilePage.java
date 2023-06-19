@@ -15,6 +15,9 @@ public class ProfilePage extends PageBase {
     @FindBy(id = "userName-value")
     WebElement username;
 
+    @FindBy(xpath = "//*[contains(text(), 'Log out')]")
+    WebElement logOutButton;
+
     public void waitForLoading() {
         wait = new Wait(driver);
         wait.forVisibility(username);
@@ -22,5 +25,9 @@ public class ProfilePage extends PageBase {
 
     public void checkUsername(String expectedUsername) {
         checkItemText(username, expectedUsername, "Username is not equal to expected");
+    }
+
+    public void logOut() {
+        click(logOutButton);
     }
 }
