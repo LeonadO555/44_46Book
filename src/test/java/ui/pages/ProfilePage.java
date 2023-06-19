@@ -19,6 +19,9 @@ public class ProfilePage extends PageBase {
     @FindBy(xpath = "//*[contains(text(),'Next')]")
     WebElement nextTableButton;
 
+    @FindBy(xpath = "//*[contains(text(),'Log out')]")
+    WebElement logOutButton;
+
     public void waitForLoading() {
         wait = new Wait(driver);
         wait.forVisibility(username);
@@ -31,4 +34,10 @@ public class ProfilePage extends PageBase {
     public void scrollToTableNextButton() {
         ScrollUtils.scrollToElement(driver, nextTableButton);
     }
+
+
+    public void logout() {
+        click(logOutButton);
+    }
+
 }

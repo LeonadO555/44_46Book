@@ -14,8 +14,29 @@ public class RegistrationNewUserTest extends TestBase {
     LoginPage loginPage;
     ProfilePage profilePage;
 
+
     @Test
     public void registerNewUserViaApiAndLoginViaUITest() {
+        // Пример HashMap
+//        LinkedHashMap<String, String> newContactObject = new LinkedHashMap<>();
+//        newContactObject.put("myName", expectedResponse.jsonPath().getString("firstName"));
+//        newContactObject.put("myLastName", expectedResponse.jsonPath().getString("lastName"));
+//        newContactObject.put("myDescription", expectedResponse.jsonPath().getString("description"));
+
+//        LinkedHashMap<String, String> hashMapString = new LinkedHashMap<>();
+//        hashMapString.put("1016", faker.name().fullName());
+//        hashMapString.put("1018", "Dollar");
+//        selectPage = new SelectPage(app.driver);
+//        for (Map.Entry<String, String> oneObject : hashMapString.entrySet()) {
+//            String name = oneObject.getKey();
+//            String expectedText = oneObject.getValue();
+//            System.out.println(name);
+//            System.out.println(expectedText);
+//            selectPage.selectValueDropdown(name);
+//            String actualText = app.driver.findElement(By.xpath("")).getText();
+//            Assert.assertEquals(actualText, expectedText, actualText + " is not equal" + expectedText);
+        //       }
+
         String password = "yA*UeeuA2pU3";
         registrationApi = new RegistrationApi();
         response = registrationApi.registerUser(201, password);
