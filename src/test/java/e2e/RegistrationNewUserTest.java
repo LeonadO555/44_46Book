@@ -7,15 +7,32 @@ import org.testng.annotations.Test;
 import ui.TestBase;
 import ui.pages.LoginPage;
 import ui.pages.ProfilePage;
+import ui.pages.SelectPage;
 
 public class RegistrationNewUserTest extends TestBase {
     RegistrationApi registrationApi;
     Response response;
     LoginPage loginPage;
     ProfilePage profilePage;
+    SelectPage selectPage;
 
     @Test
     public void registerNewUserViaApiAndLoginViaUITest() {
+//        LinkedHashMap<String, String> hashMapString = new LinkedHashMap<>();
+//        hashMapString.put("1016", "Pound");
+//        hashMapString.put("1018", "Dollar");
+//        selectPage = new SelectPage(app.driver);
+//        for (Map.Entry<String, String> oneObject : hashMapString.entrySet()) {
+//            String name = oneObject.getKey();
+//            String expectedText = oneObject.getValue();
+//            selectPage.selectValueDropdown(name);
+//            String actualText = app.driver.findElement(By.xpath("")).getText();
+//            Assert.assertEquals(actualText, expectedText, actualText + "is not equal" + expectedText);
+//        }
+//
+//        LinkedHashMap<String, Integer> hashMapInteger = new LinkedHashMap<>();
+//        hashMapInteger.put("222", 111);
+
         String password = "yA*UeeuA2pU3";
         registrationApi = new RegistrationApi();
         response = registrationApi.registerUser(201, password);
