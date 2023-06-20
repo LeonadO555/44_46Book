@@ -57,14 +57,4 @@ public class SelectAllTests extends TestBase {
 
     }
 
-
-//    @Test
-//    public void checkLogin() throws InterruptedException {
-//        framePages = new ui.pages.FramePages(app.driver);
-//        framePages.login("selenium.introduction@mail.ru", "qwerty@2020");
-//        Thread.sleep(10000);
-//
-//    }
-
-
 }
