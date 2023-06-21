@@ -1,0 +1,38 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,12 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="cea57efd-c33a-4bc2-aa4b-5f2ae48e23dc" name="Changes" comment="Learn HashMap, described LoginTestUserHashMap">
+-      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/LoginTestUserHashMap.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/test/java/ui/utils/HashMap.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/pages/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/pages/ProfilePage.java" afterDir="false" />
+-    </list>
++    <list default="true" id="cea57efd-c33a-4bc2-aa4b-5f2ae48e23dc" name="Changes" comment="Learn HashMap, described LoginTestUserHashMap" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -208,7 +203,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1684341912465</updated>
+     </task>
+-    <option name="localTasksCounter" value="4" />
++    <task id="LOCAL-00004" summary="Learn HashMap, described LoginTestUserHashMap">
++      <created>1687202150461</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1687202150461</updated>
++    </task>
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
