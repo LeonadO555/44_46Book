@@ -14,8 +14,17 @@ public class RegistrationNewUserTest extends TestBase {
     LoginPage loginPage;
     ProfilePage profilePage;
 
+
     @Test
     public void registerNewUserViaApiAndLoginViaUITest() {
+
+//        LinkedHashMap<String, String> hashMapString = new LinkedHashMap<>();
+//        // LinkedHashMap<String, String> (<key, value>)
+//        hashMapString.put("okay", "222");
+//
+//        LinkedHashMap<String, Integer> hashMapInteger = new LinkedHashMap<>();
+//        hashMapInteger.put("222", 111);
+
         String password = "yA*UeeuA2pU3";
         registrationApi = new RegistrationApi();
         response = registrationApi.registerUser(201, password);
@@ -28,6 +37,7 @@ public class RegistrationNewUserTest extends TestBase {
 
         profilePage = new ProfilePage(app.driver);
         profilePage.waitForLoading();
+        profilePage.scrollToTableNextButton();
         profilePage.checkUsername(userName);
     }
 
